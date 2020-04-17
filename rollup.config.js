@@ -1,4 +1,5 @@
 import postcss from 'rollup-plugin-postcss'
+import bundleSize from 'rollup-plugin-bundle-size'
 import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 
@@ -14,6 +15,7 @@ export default {
     postcss({
       extract: 'dist/app.css'
     }),
+    bundleSize(),
     watch && serve({
       contentBase: 'dist',
       host: '0.0.0.0',
@@ -21,5 +23,8 @@ export default {
       verbose: false
     }),
     watch && livereload('dist')
-  ]
+  ],
+  watch: {
+    clearScreen: false
+  }
 }

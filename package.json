@@ -1,0 +1,28 @@
+{
+  "name": "skeleton",
+  "scripts": {
+    "dev": "rollup -c",
+    "lint": "run-s lint:scripts lint:js lint:scss",
+    "lint:js": "eslint src",
+    "lint:scripts": "scriptlint",
+    "lint:scss": "stylelint src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "rollup": "^2.6.1",
+    "rollup-plugin-livereload": "^1.2.0",
+    "rollup-plugin-postcss": "^2.6.4",
+    "rollup-plugin-serve": "^1.0.1",
+    "scriptlint": "^2.1.1",
+    "stylelint": "^13.3.2",
+    "stylelint-config-property-sort-order-smacss": "^6.0.0",
+    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-scss": "^3.17.0"
+  },
+  "private": true
+}
